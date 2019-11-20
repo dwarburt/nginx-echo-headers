@@ -8,7 +8,7 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: dwarburt/nginx-echo-headers
+        name: dwarburt/nginx-echo-headers/echoer
         registry: docker.pkg.github.com
         username: dwarburt
         password: ${{ secrets.GITHUB_TOKEN }}
