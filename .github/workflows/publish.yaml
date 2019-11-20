@@ -1,0 +1,14 @@
+name: Publish Docker
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: dwarburt/nginx-echo-headers
+        registry: docker.pkg.github.com
+        username: dwarburt
+        password: ${{ secrets.GITHUB_TOKEN }}
